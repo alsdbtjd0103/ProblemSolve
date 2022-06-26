@@ -1,18 +1,9 @@
-import sys
-input=sys.stdin.readline
-n,m=map(int,input().rstrip().split())
-office=[]
-
-for i in range(n):
-    office.append(list(map(int,input().rstrip().split())))
-
+n,m=int(input().split())
+board=[]
 cctv=[]
-ans=1e9
 for i in range(n):
+    board.append(list(map(int,input().split())))
     for j in range(m):
-        if office[i][j]!=0 and office[i][j]!=6:
-            cctv.append(office[i][j],i,j)
-
-def func():
-    
+        if board[i][j]!=0:
+            cctv.append((i,j))
 
