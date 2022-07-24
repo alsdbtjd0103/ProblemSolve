@@ -37,3 +37,14 @@ visited리스트를 무조건 방문했다고 체크해버리면 다시 되돌�
 # 8 (by problem-1920)
 bisect를 사용할 때, 해당하는 값이 배열안에 없으면 그 값이 오름차순으로 들어갈만한 인덱스를 반환한다.
 
+# 9
+파이썬에서 index로 접근하는것보다 in으로 접근하는 것이 더 빠름
+for i in range(n):
+    for j in range(m):
+            a[i][j]~
+
+for i in a:
+    for j in i:
+        j~
+
+위 보다 아래가 더 빠름
