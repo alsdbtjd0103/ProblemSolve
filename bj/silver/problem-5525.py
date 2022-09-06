@@ -3,19 +3,19 @@ input=sys.stdin.readline
 n=int(input())
 m=int(input())
 s=input().rstrip()
-p='I'
-p+='OI'*n
-cnt=0
-
-i=0
-while True:
-    if i>len(s)-len(p):
-        break
-    if s[i]=='O':
-        i+=1
-    elif s[i:i+2*n+1]==p:
+p='I'+'OI'*n
+ans,i,cnt=0,0,0
+while i<(m-1):
+    if s[i:i+3]=='IOI':
         cnt+=1
-        i+=1
+        i+=2
+        if cnt==n:
+            cnt-=1
+            ans+=1
+            
     else:
+        cnt=0
         i+=1
-print(cnt)
+
+print(ans)
+
