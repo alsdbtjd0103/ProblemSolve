@@ -30,13 +30,9 @@ def merge(p,q,r):
             ans=temp[z]
         t+=1
         cnt+=1
-
     
-
-
 n,k=map(int,input().split())
 temp=list(map(int,input().split()))
-
 
 global ans,cnt
 cnt,ans=1,-1

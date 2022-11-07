@@ -15,5 +15,3 @@ cnt=0
 hanoi(n,1,2,3)
 print(cnt)
 for x,y in ans: print(x,y)
-    
-    
