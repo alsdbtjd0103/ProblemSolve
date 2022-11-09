@@ -37,7 +37,6 @@ def check_finish():
 def dfs(num):
     global found
     if check_finish() and not found:
-        
         for i in board:
             for j in i:
                 print(j,end=' ')
