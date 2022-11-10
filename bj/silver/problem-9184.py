@@ -14,28 +14,13 @@ def w(a,b,c):
     if a>20 or b>20 or c>20:
         if dic[(a,b,c)]==basic:
             dic[(a,b,c)]=w(20,20,20)
-        
         return dic[(a,b,c)]
 
     if a<b and b<c:
-        if dic[(a,b,c-1)]==basic:
-            dic[(a,b,c-1)]=w(a, b, c-1)
-        if dic[(a,b-1,c-1)]==basic:
-            dic[a,b-1,c-1]=w(a, b-1, c-1)
-        if dic[(a,b-1,c)]==basic:
-            dic[(a,b-1,c)]=w(a,b-1,c)
-        dic[(a,b,c)]=dic[(a,b,c-1)]+dic[(a,b-1,c-1)]-dic[(a,b-1,c)]
+        dic[(a,b,c)]=w(a, b, c-1)+w(a, b-1, c-1)-w(a,b-1,c)
         return dic[(a,b,c)]
 
-    if dic[(a-1, b, c)]==basic:
-        dic[(a-1, b, c)]=w(a-1, b, c)
-    if dic[(a-1, b-1, c)]==basic:
-        dic[(a-1, b-1, c)]=w(a-1, b-1, c)
-    if dic[(a-1, b, c-1)]==basic:
-        dic[(a-1, b, c-1)]=w(a-1, b, c-1)
-    if dic[(a-1, b-1, c-1)]==basic:
-        dic[(a-1, b-1, c-1)]=w(a-1, b-1, c-1)
-    dic[(a,b,c)]=dic[(a-1, b, c)]+dic[(a-1, b-1, c)]+dic[(a-1, b, c-1)]-dic[(a-1, b-1, c-1)]
+    dic[(a,b,c)]=w(a-1, b, c)+w(a-1, b-1, c)+w(a-1, b, c-1)-w(a-1, b-1, c-1)
     return dic[(a,b,c)]
 
 
