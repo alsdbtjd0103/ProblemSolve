@@ -1,15 +1,10 @@
 a,b=[],[]
 n,m=map(int,input().split())
-
 for _ in range(n):
     a.append(list(map(int,input().split())))
-
 m,k=map(int,input().split())
-
 for _ in range(m):
     b.append(list(map(int,input().split())))
-
-ans=[]
 
 temp1=[]
 for i in range(k):
@@ -33,9 +28,4 @@ for i in ans:
     for j in i:
         print(j,end=' ')
     print('')
-
-    
-
-    
-
 
