@@ -8,6 +8,5 @@ dp[0]=1
 
 for i in range(len(coin)):
     for j in range(coin[i],k+1):
-        if j-coin[i]>=0:
-            dp[j]+=dp[j-coin[i]]
+        dp[j]+=dp[j-coin[i]]
 print(dp[k])
