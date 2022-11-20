@@ -17,12 +17,3 @@ for i in range(n):
             result[index]=a[i]
     
 print(len(result))
-
-
-
-
-
-
-
-
-
