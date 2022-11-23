@@ -7,7 +7,6 @@ for i in a:
 stack = []
 result = []
 for i in range(len(a)):
-
     while stack:
         index = stack[-1]
         if b[a[index]] < b[a[i]]:
