@@ -48,20 +48,16 @@ for i in range(n):
 answer=0
 
 while True:
-    con1=is_finished(arr)
-    con2 = check(arr)
     temp_arr=copy.deepcopy(arr)
-    if con1:
+    if is_finished(arr):
         answer=0
         break
-    if con2:
+    if check(arr):
         break
-
-
     answer+=1
-
     dx=[1,0,-1,0]
     dy=[0,1,0,-1]
+
     for i in range(n):
         for j in range(m):
             if temp_arr[i][j]!=0:
@@ -70,8 +66,7 @@ while True:
                     nx,ny=i+dx[k],j+dy[k]
                     if nx>=0 and ny>=0 and nx<n and ny<m and temp_arr[nx][ny]==0:
                         num+=1
-                arr[i][j]-=num
-                arr[i][j]=max(arr[i][j],0)
+                arr[i][j]=max(arr[i][j]-num,0)
     temp_arr=copy.deepcopy(arr)
 
 print(answer)
