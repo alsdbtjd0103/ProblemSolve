@@ -29,6 +29,3 @@ def dfs(x,y):
 if board[0][0]>board[n-1][m-1]:
     answer = dfs(0,0)
 print(answer)
-    
-
-
